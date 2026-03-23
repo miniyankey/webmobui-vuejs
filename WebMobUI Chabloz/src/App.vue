@@ -21,9 +21,29 @@ import BaseInputNumber from "./components/BaseInputNumber.vue";
 
 <template>
   <h1>Choisissez votre température</h1>
-  <BaseInputNumber label="k" v-model="kelvin" />
-  <BaseInputNumber label="°C" v-model="celsius" />
-  <BaseInputNumber label="°F" v-model="fahrenheit" />
+  <temp-converter>
+    <BaseInputNumber label="k" v-model="kelvin" />
+    <BaseInputNumber label="°C" v-model="celsius" />
+    <BaseInputNumber label="°F" v-model="fahrenheit" />
+  </temp-converter>
 </template>
 
-<style></style>
+<style>
+
+temp-converter {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 32px;
+    color: white;
+
+}
+
+body {
+  background-color: rgb(3, 3, 77);
+}
+</style>
